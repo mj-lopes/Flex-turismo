@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  border-radius: 25px;
+
+  text-decoration: none;
+  color: white;
+  background: #102a58;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: rgb(48, 91, 163);
+}
+
+.flex-container {
+  display: flex;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* - - - - - - -  HEADER - - - - - - - - - - */
+
+.header {
+  background: #102a58;
+  padding: 2rem 0;
+}
+
+.header .flex-container {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header h1 {
+  color: white;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 1rem;
+  margin-top: 6px;
+}
+
+.header nav a {
+  color: white;
+  display: block;
+  position: relative;
+}
+
+.header nav a::after {
+  content: "";
+  display: block;
+  width: auto;
+  height: 2px;
+  transition: 0.3s;
+  background-color: #ffffff;
+  opacity: 0;
+}
+
+.header nav a:hover::after {
+  opacity: 1;
+}
+
+/* - - - - - - -  INTRO - - - - - - - - - - */
+
+.intro {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.intro .flex-item-img {
+  flex: 1 1 370px;
+}
+
+.intro h1 {
+  color: #102a58;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  max-width: 150px;
+}
+
+@media screen and (max-width: 690px) {
+  .intro {
+    margin-top: 3rem;
+    justify-content: space-around;
+  }
+
+  .intro h1 {
+    max-width: max-content;
+  }
+
+  .intro p,
+  .intro h1 {
+    text-align: center;
+  }
+
+  .intro .btn {
+    display: block;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* - - - - - - -  SOBRE - - - - - - - - - - */
+
+.sobre {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.sobre .flex-item-img {
+  flex: 1;
+  flex-basis: 300px;
+}
+
+.sobre .flex-item {
+  flex: 1;
+  flex-basis: 300px;
+}
+
+.sobre h2 {
+  margin-bottom: 2rem;
+
+  color: #102a58;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: bold;
+
+  border-left: 5px solid #102a58;
+  padding-left: 10px;
+}
+.sobre p {
+  line-height: 1.4;
+}
+
+.sobre p ~ p {
+  margin-top: 2rem;
+}
+
+/* - - - - - - -  SERVIÇOS - - - - - - - - - - */
+
+.servicos {
+  background: #102a58;
+}
+
+.servicos h2 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.servicos > .flex-container {
+  flex-direction: column;
+}
+
+.servicos .flex-container-servicos {
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.servicos .flex-item {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  color: white;
+}
+
+.servicos .flex-item p {
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.125rem;
+}
+
+.servicos .flex-item a {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+
+  background: white;
+  text-decoration: none;
+  color: #102a58;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.servicos .flex-item a:hover {
+  background: #7799cc;
+}
+
+/* - - - - - - -  PLANOS - - - - - - - - - - */
+
+.planos {
+  margin: 2rem auto;
+  flex-direction: column;
+}
+
+.planos h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.flex-container-planos {
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+.planos .flex-item {
+  border: 3px solid #102a58;
+  flex: 1;
+  flex-basis: 250px;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.planos .flex-item h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.planos .flex-item h3::after {
+  content: "";
+  display: block;
+  margin: 1rem 0 2rem 0;
+
+  width: 100%;
+  height: 2px;
+  background: #102a58;
+}
+
+.planos .flex-item ul li {
+  line-height: 2;
+}
+
+.planos .flex-item ul li::before {
+  content: "";
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+  background: #102a58;
+  margin-right: 1rem;
+}
+
+.planos .flex-item a {
+  display: block;
+}
+
+/* - - - - - - -  FOOTER - - - - - - - - - - */
+
+.footer {
+  padding: 2rem calc((100% - 992px) / 2);
+  background: #102a58;
+  color: white;
+}
+
+.footer .flex-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
